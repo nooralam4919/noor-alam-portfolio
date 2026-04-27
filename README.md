@@ -1,14 +1,21 @@
 # Noor Alam — Portfolio
 
-A modern, multi-page personal portfolio website built with React + Vite, Tailwind CSS, and Framer Motion.
+A modern, multi-page personal portfolio website built with React + Vite, styled using Tailwind CSS, and enhanced with smooth animations powered by Framer Motion.
 
 ## 🚀 Tech Stack
-
 - **React 18** + **Vite** — fast dev server, optimized build
 - **React Router v6** — multi-page SPA routing
 - **Tailwind CSS** — utility-first styling
 - **Framer Motion** — smooth page & element animations
 - **Lucide React** — clean icons
+
+✨ Features
+⚡ Lightning-fast performance with Vite
+🎨 Responsive and modern UI with Tailwind CSS
+🎬 Smooth animations using Framer Motion
+📱 Fully responsive across all devices
+🧩 Component-based scalable architecture
+🌙 Clean and minimal design
 
 ## 📁 Folder Structure
 
@@ -48,3 +55,8 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+💡 Author
+
+Noor Alam
+Full Stack Web Developer | Software Developer | Building Scalable Web Applications | React | Node.js
