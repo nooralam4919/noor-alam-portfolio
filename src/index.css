@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #04070d;
+    --bg2: #0a0f1c;
+    --bg3: #0f172a;
+
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --muted2: #64748b;
+
+    /* New Primary (Blue instead of Indigo) */
+    --indigo: #3b82f6;
+    --indigo2: #60a5fa;
+
+    /* Accent */
+    --green: #10b981;
+
+    --border: rgba(59, 130, 246, 0.18);
+    --card: rgba(10, 15, 28, 0.75);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Syne", sans-serif;
+    line-height: 1.2;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.4);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--indigo);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl px-6 py-20 mx-auto;
+  }
+
+  .section-tag {
+    @apply mb-3 text-xs font-semibold tracking-widest uppercase;
+    color: var(--indigo);
+    letter-spacing: 0.15em;
+  }
+
+  .section-title {
+    @apply mb-4 font-extrabold font-syne;
+    font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: -1px;
+    color: var(--text);
+  }
+
+  .section-sub {
+    @apply max-w-xl mb-12 leading-relaxed;
+    color: var(--muted);
+  }
+
+  .card-base {
+    background: var(--card);
+    border: 1px solid var(--border);
+    @apply relative overflow-hidden transition-all duration-300 rounded-xl p-7;
+  }
+
+  .card-base:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-3px);
+  }
+
+  .card-base::before {
+    content: "";
+    @apply absolute inset-0 transition-opacity duration-300 opacity-0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), transparent);
+  }
+
+  .card-base:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn-primary {
+    background: var(--indigo);
+    @apply text-white px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200 inline-flex items-center gap-2 no-underline border-0;
+  }
+
+  .btn-primary:hover {
+    background: #5254cc;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    @apply px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200 inline-flex items-center gap-2 no-underline;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--indigo);
+    color: var(--indigo);
+    transform: translateY(-1px);
+  }
+
+  .tag-pill {
+    @apply text-xs px-2.5 py-1 rounded-full font-medium;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--indigo2);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .tag-pill-green {
+    @apply text-xs px-2.5 py-1 rounded-full font-medium;
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--green);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .metric-text {
+    @apply flex items-center gap-1 mt-3 text-xs font-medium;
+    color: var(--green);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Noise overlay for depth */
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+
+    background: radial-gradient(circle at 20% 20%,
+        rgba(59, 130, 246, 0.08),
+        transparent 40%),
+      radial-gradient(circle at 80% 0%,
+        rgba(16, 185, 129, 0.06),
+        transparent 40%);
+
+    filter: blur(60px);
+  }
+
+  .card-base {
+    backdrop-filter: blur(10px);
+  }
+}
