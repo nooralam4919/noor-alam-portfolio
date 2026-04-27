@@ -2,6 +2,9 @@
 
 A modern, multi-page personal portfolio website built with React + Vite, styled using Tailwind CSS, and enhanced with smooth animations powered by Framer Motion.
 
+🌐 Live Demo
+🔗 View Portfolio https://noor-alam-portfolio.vercel.app/
+
 ## 🚀 Tech Stack
 - **React 18** + **Vite** — fast dev server, optimized build
 - **React Router v6** — multi-page SPA routing
