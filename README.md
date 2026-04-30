@@ -21,7 +21,7 @@ A modern, multi-page personal portfolio website built with React + Vite, styled 
 🧩 Component-based scalable architecture
 🌙 Clean and minimal design
 
-## 📁 Folder Structure.
+## 📁 Folder Structure
 
 ```
 src/
