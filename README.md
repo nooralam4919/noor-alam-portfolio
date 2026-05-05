@@ -63,4 +63,4 @@ npm run preview
 💡 Author
 
 Noor Alam
-Full Stack Web Developer | Software Developer | Building Scalable Web Applications | React | Node.js.
+Full Stack Web Developer | Software Developer | Building Scalable Web Applications | React | Node.js
