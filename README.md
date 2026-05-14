@@ -44,7 +44,7 @@ src/
 └── index.css            # Global styles + design tokens
 ```
 
-## ⚙️ Setup
+## ⚙️ Setup.
 
 ```bash
 # Install dependencies
